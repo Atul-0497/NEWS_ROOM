@@ -40,7 +40,7 @@ const Navbar = ({ setArticles }) => {
                 {/* Logo */}
                 <Link to={'/'}>
                     <div className='md:text-2xl text-lg font-bold text-blue-600 dark:text-gray-100 cursor-pointer'>
-                        NewsApp
+                        NEWS-ROOM
                     </div>
                 </Link>
 

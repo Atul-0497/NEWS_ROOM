@@ -11,18 +11,25 @@ const App = () => {
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
   }, [theme])
+
+  const newsProps = {
+    country: 'us',
+    articles,
+    setArticles
+  }
+
   return (
     <BrowserRouter>
-      <Navbar setArticles={setArticles}/>
+      <Navbar setArticles={setArticles} />
       <Routes>
-        <Route path='/' element={<News country='us' category='general' articles={articles} setArticles={setArticles} />}></Route>
-        <Route path='/business' element={<News country='us' category='business' articles={articles} setArticles={setArticles} />}></Route>
-        <Route path='/entertainment' element={<News country='us' category='entertainment' articles={articles} setArticles={setArticles} />}></Route>
-        <Route path='/general' element={<News country='us' category='general' articles={articles} setArticles={setArticles} />}></Route>
-        <Route path='/health' element={<News country='us' category='health' articles={articles} setArticles={setArticles} />}></Route>
-        <Route path='/science' element={<News country='us' category='science' articles={articles} setArticles={setArticles} />}></Route>
-        <Route path='/sports' element={<News country='us' category='sports' articles={articles} setArticles={setArticles} />}></Route>
-        <Route path='/technology' element={<News country='us' category='technology' articles={articles} setArticles={setArticles} />}></Route>
+        <Route path="/" element={<News {...newsProps} category="general" />} />
+        <Route path="/business" element={<News {...newsProps} category="business" />} />
+        <Route path="/entertainment" element={<News {...newsProps} category="entertainment" />} />
+        <Route path="/general" element={<News {...newsProps} category="general" />} />
+        <Route path="/health" element={<News {...newsProps} category="health" />} />
+        <Route path="/science" element={<News {...newsProps} category="science" />} />
+        <Route path="/sports" element={<News {...newsProps} category="sports" />} />
+        <Route path="/technology" element={<News {...newsProps} category="technology" />} />
       </Routes>
     </BrowserRouter>
   )

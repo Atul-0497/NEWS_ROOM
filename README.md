@@ -58,4 +58,4 @@ npm run dev
 **Atul Singh**
 
 * GitHub: https://github.com/Atul-0497
-* LinkedIn:https://www.linkedin.com/in/atul-singh4797/
+
